@@ -102,15 +102,5 @@ def cli():
     trains = TrainCollection(rows)
     trains.pretty_print()
 
-def colored(color, text):
-    table = {
-        'red': '\003[91m',
-        'green': '\033[92m',
-        'nc': '\033[0'
-    }
-    cv = table.get(color)
-    nc = table.get('nc')
-    return ''.join([cv, text, nc])
-
 if __name__ == '__main__':
     cli()
